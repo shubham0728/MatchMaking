@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MatchMaking App</string>
+    <string name="no_netowrk">No Network. Please check connection.</string>
+    <string name="error">Error : Something went wrong</string>
+    <string name="nothing">Nothing to show</string>
+    <string name="please_check_your_internet_connection">Please check your internet connection.</string>
+</resources>

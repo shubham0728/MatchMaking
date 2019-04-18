@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/activity_margin_half"
+            card_view:cardElevation="@dimen/padding">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="@dimen/activity_margin"
+                        android:layout_height="@dimen/activity_margin"
+                        android:layout_centerInParent="true"
+                        android:theme="@style/Progress" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/image_height_full"
+                        android:layout_height="@dimen/image_height_full"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_launcher_background"
+                        app:civ_border_color="@android:color/white"
+                        app:civ_border_width="4dp"
+                        app:civ_shadow="true"
+                        app:civ_shadow_color="@color/transparent_bg_dark"
+                        app:civ_shadow_radius="10" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_half"
+                    android:fontFamily="@font/raleway"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_half"
+                    android:fontFamily="@font/raleway"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textsize_small" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_city"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_half"
+                    android:layout_marginBottom="@dimen/margin_full"
+                    android:padding="@dimen/padding">
+
+                    <ImageView
+                        android:id="@+id/img_cross"
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:background="@drawable/cross"
+                        app:elevation="5dp" />
+
+                    <ImageView
+                        android:id="@+id/img_right"
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_marginLeft="@dimen/image_width"
+                        android:layout_toRightOf="@+id/img_cross"
+                        android:background="@drawable/right"
+                        app:elevation="5dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>
